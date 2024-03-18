@@ -1,13 +1,4 @@
-# own module
-# def count_vowel(s):
-#     count=0
-#     for i in  s:
-#         if (i=="a" or i=="e" or i=="i" or i=="o" or i=="u"
-#             or i=="A" or i=="E" or i=="I" or i=="O" or i=="U"):
-#             count+=1
-#     print(count)
-
-# for count no. of vowel
+# 1 for count no. of vowel
 def count_vowel(s):
     vowels = "aeiouAEIOU"
     count=0
@@ -16,18 +7,26 @@ def count_vowel(s):
             count+=1
     return count
         
-    
-    
 
-    
-    
-    
-# Count Duplicate
-# Return Index
-# Revome Vowels From String
-#
-    
+#2  Duplicate vowels and their counts
+import numpy as np
+
+def count_duplicate_vowels(user_input):
+    myArr = np.array(['a', 'e', 'i', 'o', 'u'])
+
+     
+    user_input = user_input.lower()
+
  
+    vowel_counts = {vowel: 0 for vowel in myArr}
 
+     
+    for vowel in myArr:
+        vowel_counts[vowel] = user_input.count(vowel)
+
+
+    duplicate_vowels = {vowel: count for vowel, count in vowel_counts.items() if count > 1}
+
+    return duplicate_vowels
 
  
