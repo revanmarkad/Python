@@ -1,3 +1,10 @@
+# Question:
+# Write two functions to find the minimum and maximum sums of five integers in an array. 
+# Each function takes an array of integers as input. The first function, miniMaxSum,
+# calculates the minimum and maximum sums by excluding one element at a time and printing the results.
+# The second function, minMaxSum, calculates the minimum and maximum sums by subtracting the smallest and largest elements, respectively,
+# from the sum of all elements and prints the results.
+
 def miniMaxSum(arr):
     small = arr.index(min(arr))
     big = arr.index(max(arr))
@@ -18,12 +25,6 @@ def miniMaxSum(arr):
 
 miniMaxSum([1,2,3,4,5,6])
 
-
-
-
-# way 2
-
-
 def minMaxSum(arr):
     small = arr.index(min(arr))
     big = arr.index(max(arr))
@@ -32,6 +33,5 @@ def minMaxSum(arr):
     max_sum = sum(arr) - arr[small]
 
     print(min_sum, max_sum)
- 
  
 minMaxSum([1,2,3,4,5,6])
